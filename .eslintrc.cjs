@@ -17,15 +17,9 @@ module.exports = {
     "airbnb-typescript/base",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:typescript-sort-keys/recommended",
     "prettier",
   ],
-  plugins: [
-    "@typescript-eslint/eslint-plugin",
-    "simple-import-sort",
-    "import",
-    "typescript-sort-keys",
-  ],
+  plugins: ["@typescript-eslint/eslint-plugin", "simple-import-sort", "import"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: "tsconfig.json",

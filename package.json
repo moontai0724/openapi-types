@@ -1,36 +1,33 @@
 {
-  "name": "@moontai0724/package-template",
+  "name": "@moontaiworks/openapi-types",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "version": "0.0.0-pre",
-  "description": "An npm package template.",
+  "description": "Types for OpenAPI Specification",
   "author": "moontai0724",
-  "license": "UNLICENSED",
-  "homepage": "https://moontai0724.github.io/package-template",
+  "license": "MIT",
+  "homepage": "https://moontaiworks.github.io/openapi-types",
   "bugs": {
-    "url": "https://github.com/moontai0724/package-template/issues"
+    "url": "https://github.com/moontaiworks/openapi-types/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moontai0724/package-template.git"
+    "url": "git+https://github.com/moontaiworks/openapi-types.git"
   },
   "keywords": [
-    "package",
-    "template"
+    "openapi",
+    "typescript",
+    "types"
   ],
   "files": [
     "build",
     "dist"
   ],
-  "main": "dist/index.min.js",
-  "module": "dist/index.min.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.min.js",
-      "import": "./build/index.js",
       "types": "./build/index.d.ts"
     }
   },
@@ -47,11 +44,8 @@
     "prepare": "husky || true"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.4",
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
