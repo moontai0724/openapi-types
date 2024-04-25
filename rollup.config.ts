@@ -10,11 +10,6 @@ export default [
       format: "es",
       sourcemap: false,
     },
-    plugins: [
-      typescript({
-        tsconfig: "./tsconfig.json",
-      }),
-      dts(),
-    ],
+    plugins: [typescript(), dts()],
   },
 ];
