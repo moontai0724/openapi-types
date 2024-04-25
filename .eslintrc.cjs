@@ -85,4 +85,13 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: ["**/*.spec.ts", "**/*.test.ts", "**/*.test-d.ts"],
+      rules: {
+        "node/no-unpublished-import": "off",
+        "import/no-extraneous-dependencies": "off",
+      },
+    },
+  ],
 };

@@ -42,6 +42,11 @@ export interface SecuritySchemeObjectHttpBearer
   bearerFormat?: string;
 }
 
+export interface SecuritySchemeObjectMutualTLS
+  extends BaseSecuritySchemeObject {
+  type: "mutualTLS";
+}
+
 export interface SecuritySchemeObjectOAuth2 extends BaseSecuritySchemeObject {
   type: "oauth2";
   /**
@@ -70,5 +75,6 @@ export type SecuritySchemeObject =
   | SecuritySchemeObjectApiKey
   | SecuritySchemeObjectHttp
   | SecuritySchemeObjectHttpBearer
+  | SecuritySchemeObjectMutualTLS
   | SecuritySchemeObjectOAuth2
   | SecuritySchemeObjectOpenIdConnect;

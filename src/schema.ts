@@ -36,4 +36,8 @@ export interface SchemaObject extends JSONSchema7 {
    * @deprecated The `example` property has been deprecated in favor of the JSON Schema `examples` keyword. Use of `example` is discouraged, and later versions of this specification may remove it.
    */
   example?: any;
+  /**
+   * This object _MAY_ be extended with [Specification Extensions](https://spec.openapis.org/oas/latest.html#specification-extensions), though as noted, additional properties _MAY_ omit the `x-` prefix within this object.
+   */
+  [key: string]: any;
 }

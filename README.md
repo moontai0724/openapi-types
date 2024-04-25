@@ -2,7 +2,6 @@
 
 [![NPM Version](https://img.shields.io/npm/v/@moontaiworks/openapi-types)](https://www.npmjs.com/package/@moontaiworks/openapi-types)
 [![NPM Downloads](https://img.shields.io/npm/d18m/@moontaiworks/openapi-types)](https://www.npmjs.com/package/@moontaiworks/openapi-types)
-[![Codecov](https://codecov.io/gh/moontaiworks/openapi-types/graph/badge.svg)](https://codecov.io/gh/moontaiworks/openapi-types)
 
 TypeScript types for [OpenAPI](https://www.openapis.org/) specification.
 

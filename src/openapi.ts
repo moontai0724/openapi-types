@@ -13,7 +13,7 @@ import type { TagObject } from "./tag";
  * This is the root object of the [OpenAPI document](https://spec.openapis.org/oas/latest.html#openapi-document).
  * @see https://spec.openapis.org/oas/latest.html#openapi-object
  */
-export interface OpenAPIObject extends Extendable {
+interface BaseOpenAPIObject extends Extendable {
   /**
    * This string _MUST_ be the [version number](https://spec.openapis.org/oas/latest.html#versions) of the OpenAPI Specification that the OpenAPI document uses. The `openapi` field _SHOULD_ be used by tooling to interpret the OpenAPI document. This is _not_ related to the API [`info.version`](https://spec.openapis.org/oas/latest.html#infoVersion) string.
    */
@@ -55,3 +55,25 @@ export interface OpenAPIObject extends Extendable {
    */
   externalDocs?: ExternalDocumentationObject;
 }
+
+interface HasPaths extends BaseOpenAPIObject {
+  paths: PathsObject;
+}
+
+interface HasComponents extends BaseOpenAPIObject {
+  components: ComponentsObject;
+}
+
+interface HasWebhooks extends BaseOpenAPIObject {
+  webhooks: Record<string, PathItemObject | ReferenceObject>;
+}
+
+/**
+ * This is the root object of the [OpenAPI document](https://spec.openapis.org/oas/latest.html#openapi-document).
+ *
+ * A self-contained or composite resource which defines or describes an API or elements of an API. The OpenAPI document _MUST_ contain at least one [paths](https://spec.openapis.org/oas/latest.html#paths-object) field, a [components](https://spec.openapis.org/oas/latest.html#oasComponents) field or a [webhooks](https://spec.openapis.org/oas/latest.html#oasWebhooks) field. An OpenAPI document uses and conforms to the OpenAPI Specification.
+ *
+ * @see https://spec.openapis.org/oas/latest.html#openapi-object
+ * @see https://spec.openapis.org/oas/latest.html#openapi-document
+ */
+export type OpenAPIObject = HasPaths | HasComponents | HasWebhooks;
