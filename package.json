@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.0-pre",
+  "version": "3.1.0",
   "description": "Types for OpenAPI Specification",
   "author": "moontai0724",
   "license": "MIT",
@@ -79,5 +79,8 @@
   "lint-staged": {
     "*.{ts,js}": "eslint --cache --cache-location node_modules/.cache/eslint",
     "*.**": "prettier --check --ignore-unknown"
+  },
+  "dependencies": {
+    "@types/json-schema": "^7.0.15"
   }
 }

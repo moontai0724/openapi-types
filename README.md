@@ -4,6 +4,10 @@
 [![NPM Downloads](https://img.shields.io/npm/d18m/@moontaiworks/openapi-types)](https://www.npmjs.com/package/@moontaiworks/openapi-types)
 [![Codecov](https://codecov.io/gh/moontaiworks/openapi-types/graph/badge.svg)](https://codecov.io/gh/moontaiworks/openapi-types)
 
+TypeScript types for [OpenAPI](https://www.openapis.org/) specification.
+
+Currently, this package only supports OpenAPI v3.1.
+
 ## Install
 
 ### NPM
@@ -27,11 +31,16 @@ pnpm add -d @moontaiworks/openapi-types
 ## Usage
 
 ```typescript
-import { add, divide, max } from "@moontaiworks/openapi-types";
+import { OpenAPIObject, OperationObject } from "@moontaiworks/openapi-types";
 
-add(1, 2); // 3
-divide(1, 2); // 0.5
-max(1, 2); // 2
+const openapi: OpenAPIObject = {
+  openapi: "3.0.0",
+  // ...
+};
+
+const operation: OperationObject = {
+  // ...
+};
 ```
 
 ## API Document

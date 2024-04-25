@@ -39,6 +39,7 @@ module.exports = {
     "import/prefer-default-export": "off",
 
     // additional rules
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/consistent-type-exports": "error",
     "@typescript-eslint/consistent-type-imports": [
       "error",
