@@ -11,11 +11,13 @@ export interface ContactObject extends Extendable {
    */
   name?: string;
   /**
-   * The URL pointing to the contact information. This MUST be in the form of a URL.
+   * The URL pointing to the contact information. This MUST be in the form of a
+   * URL.
    */
   url?: string;
   /**
-   * The email address of the contact person/organization. This _MUST_ be in the form of an email address.
+   * The email address of the contact person/organization. This _MUST_ be in the
+   * form of an email address.
    */
   email?: string;
 }
