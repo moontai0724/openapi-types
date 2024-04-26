@@ -3,7 +3,9 @@ import type { ContactObject } from "./contact";
 import type { LicenseObject } from "./license";
 
 /**
- * The object provides metadata about the API. The metadata _MAY_ be used by the clients if needed, and _MAY_ be presented in editing or documentation generation tools for convenience.
+ * The object provides metadata about the API. The metadata _MAY_ be used by the
+ * clients if needed, and _MAY_ be presented in editing or documentation
+ * generation tools for convenience.
  *
  * @see https://spec.openapis.org/oas/latest.html#info-object
  */
@@ -17,11 +19,13 @@ export interface InfoObject extends Extendable {
    */
   summary?: string;
   /**
-   * A description of the API. [CommonMark syntax](https://spec.commonmark.org/) _MAY_ be used for rich text representation.
+   * A description of the API. [CommonMark syntax](https://spec.commonmark.org/)
+   * _MAY_ be used for rich text representation.
    */
   description?: string;
   /**
-   * A URL to the Terms of Service for the API. This _MUST_ be in the form of a URL.
+   * A URL to the Terms of Service for the API. This _MUST_ be in the form of a
+   * URL.
    */
   termsOfService?: string;
   /**
@@ -33,7 +37,10 @@ export interface InfoObject extends Extendable {
    */
   license?: LicenseObject;
   /**
-   * The version of the OpenAPI document (which is distinct from the [OpenAPI Specification version](https://spec.openapis.org/oas/latest.html#oasVersion) or the API implementation version).
+   * The version of the OpenAPI document (which is distinct from the [OpenAPI
+   * Specification
+   * version](https://spec.openapis.org/oas/latest.html#oasVersion) or the API
+   * implementation version).
    */
   version: string;
 }

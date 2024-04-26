@@ -11,11 +11,13 @@ export interface LicenseObject extends Extendable {
    */
   name: string;
   /**
-   * An [SPDX](https://spdx.org/licenses/) license expression for the API. The `identifier` field is mutually exclusive of the `url` field.
+   * An [SPDX](https://spdx.org/licenses/) license expression for the API. The
+   * `identifier` field is mutually exclusive of the `url` field.
    */
   identifier?: string;
   /**
-   * A URL to the license used for the API. This _MUST_ be in the form of a URL. The `url` field is mutually exclusive of the `identifier` field.
+   * A URL to the license used for the API. This _MUST_ be in the form of a URL.
+   * The `url` field is mutually exclusive of the `identifier` field.
    */
   url?: string;
 }

@@ -21,11 +21,13 @@ export interface OAuthFlowsObject extends Extendable {
    */
   password?: OAuthFlowObjectOAuth2Password;
   /**
-   * Configuration for the OAuth Client Credentials flow. Previously called `application` in OpenAPI 2.0.
+   * Configuration for the OAuth Client Credentials flow. Previously called
+   * `application` in OpenAPI 2.0.
    */
   clientCredentials?: OAuthFlowObjectOAuth2ClientCredentials;
   /**
-   * Configuration for the OAuth Authorization Code flow. Previously called `accessCode` in OpenAPI 2.0.
+   * Configuration for the OAuth Authorization Code flow. Previously called
+   * `accessCode` in OpenAPI 2.0.
    */
   authorizationCode?: OAuthFlowObjectOAuth2AuthorizationCode;
 }

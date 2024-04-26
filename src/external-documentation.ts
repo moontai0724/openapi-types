@@ -7,7 +7,9 @@ import type { Extendable } from "./_extendable";
  */
 export interface ExternalDocumentationObject extends Extendable {
   /**
-   * A description of the target documentation. [CommonMark syntax](https://spec.commonmark.org/) _MAY_ be used for rich text representation.
+   * A description of the target documentation. [CommonMark
+   * syntax](https://spec.commonmark.org/) _MAY_ be used for rich text
+   * representation.
    */
   description?: string;
   /**
