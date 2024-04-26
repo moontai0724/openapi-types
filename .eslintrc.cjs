@@ -22,7 +22,7 @@ module.exports = {
   plugins: ["@typescript-eslint/eslint-plugin", "simple-import-sort", "import"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: "tsconfig.json",
+    project: "tsconfig.lint.json",
     tsconfigRootDir: __dirname,
     sourceType: "module",
   },
