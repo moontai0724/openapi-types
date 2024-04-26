@@ -30,7 +30,7 @@ pnpm add -d @moontaiworks/openapi-types
 ## Usage
 
 ```typescript
-import { OpenAPIObject, OperationObject } from "@moontaiworks/openapi-types";
+import type { OpenAPIObject, OperationObject } from "@moontaiworks/openapi-types";
 
 const openapi: OpenAPIObject = {
   openapi: "3.0.0",
