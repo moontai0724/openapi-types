@@ -30,7 +30,7 @@ export type ParameterStyle =
   | "pipeDelimited"
   | "deepObject";
 
-export interface BaseBaseParameterObject extends Extendable {
+export interface BaseParameterObject extends Extendable {
   /**
    * The name of the parameter. Parameter names are _case sensitive_.
    *
@@ -94,8 +94,7 @@ export interface BaseBaseParameterObject extends Extendable {
 /**
  * The rules for serialization of the parameter are specified in one of two ways. For simpler scenarios, a [`schema`](https://spec.openapis.org/oas/latest.html#parameterSchema) and [`style`](https://spec.openapis.org/oas/latest.html#parameterStyle) can describe the structure and syntax of the parameter. A parameter _MUST_ contain either a `schema` property, or a `content` property, but not both. When `example` or `examples` are provided in conjunction with the `schema` object, the example _MUST_ follow the prescribed serialization strategy for the parameter.
  */
-interface WithSchema
-  extends Pick<BaseBaseParameterObject, "schema" | "content"> {
+interface WithSchema extends Pick<BaseParameterObject, "schema" | "content"> {
   schema: SchemaObject;
   content?: never;
 }
@@ -103,19 +102,18 @@ interface WithSchema
 /**
  * The rules for serialization of the parameter are specified in one of two ways. For more complex scenarios, the [`content`](https://spec.openapis.org/oas/latest.html#parameterContent) property can define the media type and schema of the parameter. A parameter _MUST_ contain either a `schema` property, or a `content` property, but not both. When `example` or `examples` are provided in conjunction with the `schema` object, the example _MUST_ follow the prescribed serialization strategy for the parameter.
  */
-interface WithContent
-  extends Pick<BaseBaseParameterObject, "schema" | "content"> {
+interface WithContent extends Pick<BaseParameterObject, "schema" | "content"> {
   content: Record<string, MediaTypeObject>;
   schema?: never;
 }
 
-export type BaseParameterObject =
-  | (BaseBaseParameterObject & WithSchema)
-  | (BaseBaseParameterObject & WithContent);
+export type ParameterObject =
+  | (BaseParameterObject & WithSchema)
+  | (BaseParameterObject & WithContent);
 
 export type PathParameterStyle = "matrix" | "label" | "simple";
 
-interface BasePathParameterObject extends BaseBaseParameterObject {
+interface BasePathParameterObject extends BaseParameterObject {
   in: "path";
   /**
    * @default "simple"
@@ -135,7 +133,7 @@ export type QueryParameterStyle =
   | "pipeDelimited"
   | "deepObject";
 
-export interface BaseQueryParameterObject extends BaseBaseParameterObject {
+export interface BaseQueryParameterObject extends BaseParameterObject {
   in: "query";
   /**
    * @default "form"
@@ -149,7 +147,7 @@ export type QueryParameterObject =
 
 export type HeaderParameterStyle = "simple";
 
-export interface BaseHeaderParameterObject extends BaseBaseParameterObject {
+export interface BaseHeaderParameterObject extends BaseParameterObject {
   in: "header";
   style?: HeaderParameterStyle;
   allowEmptyValue?: never;
@@ -161,7 +159,7 @@ export type HeaderParameterObject =
 
 export type CookieParameterStyle = "form";
 
-export interface BaseCookieParameterObject extends BaseBaseParameterObject {
+export interface BaseCookieParameterObject extends BaseParameterObject {
   in: "cookie";
   style?: CookieParameterStyle;
   allowEmptyValue?: never;
@@ -171,8 +169,8 @@ export type CookieParameterObject =
   | (BaseCookieParameterObject & WithSchema)
   | (BaseCookieParameterObject & WithContent);
 
-export type ParameterObject =
-  | PathParameterObject
-  | QueryParameterObject
-  | HeaderParameterObject
-  | CookieParameterObject;
+export type AnyParameterObject =
+  | BasePathParameterObject
+  | BaseQueryParameterObject
+  | BaseHeaderParameterObject
+  | BaseCookieParameterObject;

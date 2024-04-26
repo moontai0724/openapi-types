@@ -2,14 +2,14 @@ import type { Extendable } from "./_extendable";
 import type { CallbackObject } from "./callback";
 import type { ExampleObject } from "./example";
 import type { HeaderObject } from "./header";
-import type { LinkObject } from "./link";
-import type { ParameterObject } from "./parameter";
+import type { AnyLinkObject } from "./link";
+import type { AnyParameterObject } from "./parameter";
 import type { PathItemObject } from "./path-item";
 import type { ReferenceObject } from "./reference";
 import type { RequestBodyObject } from "./request-body";
 import type { ResponseObject } from "./response";
 import type { SchemaObject } from "./schema";
-import type { SecuritySchemeObject } from "./security-scheme";
+import type { AnySecuritySchemeObject } from "./security-scheme";
 
 /**
  * Holds a set of reusable objects for different aspects of the OAS. All objects defined within the components object will have no effect on the API unless they are explicitly referenced from properties outside the components object.
@@ -30,7 +30,7 @@ export interface ComponentsObject extends Extendable {
   /**
    * An object to hold reusable [Parameter Objects](https://spec.openapis.org/oas/latest.html#parameter-object).
    */
-  parameters?: Record<string, ParameterObject | ReferenceObject>;
+  parameters?: Record<string, AnyParameterObject | ReferenceObject>;
   /**
    * An object to hold reusable [Example Objects](https://spec.openapis.org/oas/latest.html#example-object).
    */
@@ -46,11 +46,11 @@ export interface ComponentsObject extends Extendable {
   /**
    * An object to hold reusable [Security Scheme Objects](https://spec.openapis.org/oas/latest.html#security-scheme-object).
    */
-  securitySchemes?: Record<string, SecuritySchemeObject | ReferenceObject>;
+  securitySchemes?: Record<string, AnySecuritySchemeObject | ReferenceObject>;
   /**
    * An object to hold reusable [Link Objects](https://spec.openapis.org/oas/latest.html#link-object).
    */
-  links?: Record<string, LinkObject | ReferenceObject>;
+  links?: Record<string, AnyLinkObject | ReferenceObject>;
   /**
    * An object to hold reusable [Callback Objects](https://spec.openapis.org/oas/latest.html#callback-object).
    */

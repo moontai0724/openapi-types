@@ -1,6 +1,6 @@
 import type { Extendable } from "./_extendable";
 import type { HeaderObject } from "./header";
-import type { LinkObject } from "./link";
+import type { AnyLinkObject } from "./link";
 import type { MediaTypeObject } from "./media-type";
 import type { ReferenceObject } from "./reference";
 
@@ -25,5 +25,5 @@ export interface ResponseObject extends Extendable {
   /**
    * A map of operations links that can be followed from the response. The key of the map is a short name for the link, following the naming constraints of the names for [Component Objects](https://spec.openapis.org/oas/latest.html#components-object).
    */
-  links?: Record<string, LinkObject | ReferenceObject>;
+  links?: Record<string, AnyLinkObject | ReferenceObject>;
 }

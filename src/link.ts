@@ -12,7 +12,7 @@ import type { ServerObject } from "./server";
  *
  * @see https://spec.openapis.org/oas/latest.html#link-object
  */
-export interface BaseLinkObject extends Extendable {
+export interface LinkObject extends Extendable {
   /**
    * A relative or absolute URI reference to an OAS operation. This field is mutually exclusive of the `operationId` field, and _MUST_ point to an [Operation Object](https://spec.openapis.org/oas/latest.html#operation-object). Relative `operationRef` values _MAY_ be used to locate an existing [Operation Object](https://spec.openapis.org/oas/latest.html#operation-object) in the OpenAPI definition. See the rules for resolving [Relative References](https://spec.openapis.org/oas/latest.html#relative-references-in-uris).
    */
@@ -39,12 +39,12 @@ export interface BaseLinkObject extends Extendable {
   server?: ServerObject;
 }
 
-interface WithRef extends BaseLinkObject {
+export interface LinkObjectWithRef extends LinkObject {
   operationRef: string;
   operationId?: never;
 }
 
-interface WithId extends BaseLinkObject {
+export interface LinkObjectWithId extends LinkObject {
   operationId: string;
   operationRef?: never;
 }
@@ -58,4 +58,4 @@ interface WithId extends BaseLinkObject {
  *
  * @see https://spec.openapis.org/oas/latest.html#link-object
  */
-export type LinkObject = WithRef | WithId;
+export type AnyLinkObject = LinkObjectWithRef | LinkObjectWithId;

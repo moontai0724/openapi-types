@@ -1,7 +1,7 @@
 import type { Extendable } from "./_extendable";
 import type { CallbackObject } from "./callback";
 import type { ExternalDocumentationObject } from "./external-documentation";
-import type { ParameterObject } from "./parameter";
+import type { AnyParameterObject } from "./parameter";
 import type { ReferenceObject } from "./reference";
 import type { RequestBodyObject } from "./request-body";
 import type { ResponsesObject } from "./responses";
@@ -37,7 +37,7 @@ export interface OperationObject extends Extendable {
   /**
    * A list of parameters that are applicable for this operation. If a parameter is already defined at the [Path Item](https://spec.openapis.org/oas/latest.html#pathItemParameters), the new definition will override it but can never remove it. The list _MUST NOT_ include duplicated parameters. A unique parameter is defined by a combination of a [name](https://spec.openapis.org/oas/latest.html#parameterName) and [location](https://spec.openapis.org/oas/latest.html#parameterIn). The list can use the [Reference Object](https://spec.openapis.org/oas/latest.html#reference-object) to link to parameters that are defined at the [OpenAPI Object’s components/parameters](https://spec.openapis.org/oas/latest.html#componentsParameters).
    */
-  parameters?: (ParameterObject | ReferenceObject)[];
+  parameters?: (AnyParameterObject | ReferenceObject)[];
   /**
    * The request body applicable for this operation. The `requestBody` is fully supported in HTTP methods where the HTTP 1.1 specification \[[RFC7231](https://spec.openapis.org/oas/latest.html#bib-RFC7231)\] has explicitly defined semantics for request bodies. In other cases where the HTTP spec is vague (such as [GET](https://tools.ietf.org/html/rfc7231#section-4.3.1), [HEAD](https://tools.ietf.org/html/rfc7231#section-4.3.2) and [DELETE](https://tools.ietf.org/html/rfc7231#section-4.3.5)), `requestBody` is permitted but does not have well-defined semantics and _SHOULD_ be avoided if possible.
    */
