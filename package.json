@@ -1,5 +1,5 @@
 {
-  "name": "@moontaiworks/openapi-types",
+  "name": "@moontai0724/openapi-types",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -8,13 +8,13 @@
   "description": "Types for OpenAPI Specification",
   "author": "moontai0724",
   "license": "MIT",
-  "homepage": "https://moontaiworks.github.io/openapi-types",
+  "homepage": "https://moontai0724.github.io/openapi-types",
   "bugs": {
-    "url": "https://github.com/moontaiworks/openapi-types/issues"
+    "url": "https://github.com/moontai0724/openapi-types/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moontaiworks/openapi-types.git"
+    "url": "git+https://github.com/moontai0724/openapi-types.git"
   },
   "keywords": [
     "openapi",
