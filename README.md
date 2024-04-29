@@ -1,7 +1,7 @@
-# @moontaiworks/openapi-types
+# @moontai0724/openapi-types
 
-[![NPM Version](https://img.shields.io/npm/v/@moontaiworks/openapi-types)](https://www.npmjs.com/package/@moontaiworks/openapi-types)
-[![NPM Downloads](https://img.shields.io/npm/d18m/@moontaiworks/openapi-types)](https://www.npmjs.com/package/@moontaiworks/openapi-types)
+[![NPM Version](https://img.shields.io/npm/v/@moontai0724/openapi-types)](https://www.npmjs.com/package/@moontai0724/openapi-types)
+[![NPM Downloads](https://img.shields.io/npm/d18m/@moontai0724/openapi-types)](https://www.npmjs.com/package/@moontai0724/openapi-types)
 
 TypeScript types for [OpenAPI](https://www.openapis.org/) specification.
 
@@ -12,19 +12,19 @@ Currently, this package only supports OpenAPI v3.1.
 ### NPM
 
 ```bash
-npm install -d @moontaiworks/openapi-types
+npm install -d @moontai0724/openapi-types
 ```
 
 ### Yarn
 
 ```bash
-yarn add -d @moontaiworks/openapi-types
+yarn add -d @moontai0724/openapi-types
 ```
 
 ### PNPM
 
 ```bash
-pnpm add -d @moontaiworks/openapi-types
+pnpm add -d @moontai0724/openapi-types
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ pnpm add -d @moontaiworks/openapi-types
 import type {
   OpenAPIObject,
   OperationObject,
-} from "@moontaiworks/openapi-types";
+} from "@moontai0724/openapi-types";
 
 const openapi: OpenAPIObject = {
   openapi: "3.0.0",
@@ -47,4 +47,4 @@ const operation: OperationObject = {
 
 ## API Document
 
-See the [API documentation](https://moontaiworks.github.io/openapi-types/).
+See the [API documentation](https://moontai0724.github.io/openapi-types/).
