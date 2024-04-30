@@ -12,19 +12,19 @@ Currently, this package only supports OpenAPI v3.1.
 ### NPM
 
 ```bash
-npm install -d @moontai0724/openapi-types
+npm install -D @moontai0724/openapi-types
 ```
 
 ### Yarn
 
 ```bash
-yarn add -d @moontai0724/openapi-types
+yarn add -D @moontai0724/openapi-types
 ```
 
 ### PNPM
 
 ```bash
-pnpm add -d @moontai0724/openapi-types
+pnpm add -D @moontai0724/openapi-types
 ```
 
 ## Usage
