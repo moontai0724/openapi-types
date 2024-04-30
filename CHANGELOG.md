@@ -1,3 +1,11 @@
+## [3.1.5](https://github.com/moontai0724/openapi-types/compare/v3.1.4...v3.1.5) (2024-04-30)
+
+
+### Bug Fixes
+
+* add external types into bundle ([d2e5fb1](https://github.com/moontai0724/openapi-types/commit/d2e5fb14a83976be17b9a421d9343244080d0412))
+* respect json schema definition accepts boolean ([217aabe](https://github.com/moontai0724/openapi-types/commit/217aabead6ca53de4d0e2b43f12ea6634fb00aeb))
+
 ## [3.1.4](https://github.com/moontai0724/openapi-types/compare/v3.1.3...v3.1.4) (2024-04-29)
 
 
