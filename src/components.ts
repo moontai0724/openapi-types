@@ -8,7 +8,7 @@ import type { PathItemObject } from "./path-item";
 import type { ReferenceObject } from "./reference";
 import type { RequestBodyObject } from "./request-body";
 import type { ResponseObject } from "./response";
-import type { SchemaObject } from "./schema";
+import type { SchemaObjectDefinition } from "./schema";
 import type { AnySecuritySchemeObject } from "./security-scheme";
 
 /**
@@ -26,7 +26,7 @@ export interface ComponentsObject extends Extendable {
    * An object to hold reusable [Schema
    * Objects](https://spec.openapis.org/oas/latest.html#schema-object).
    */
-  schemas?: Record<string, SchemaObject>;
+  schemas?: Record<string, SchemaObjectDefinition>;
   /**
    * An object to hold reusable [Response
    * Objects](https://spec.openapis.org/oas/latest.html#response-object).
