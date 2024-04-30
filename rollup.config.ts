@@ -10,6 +10,11 @@ export default [
       format: "es",
       sourcemap: false,
     },
-    plugins: [typescript(), dts()],
+    plugins: [
+      typescript(),
+      dts({
+        respectExternal: true,
+      }),
+    ],
   },
 ];

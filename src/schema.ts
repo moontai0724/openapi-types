@@ -1,4 +1,4 @@
-import type { JSONSchema7 } from "json-schema";
+import type { JSONSchema7, JSONSchema7Definition } from "json-schema";
 
 import type { DiscriminatorObject } from "./discriminator";
 import type { ExternalDocumentationObject } from "./external-documentation";
@@ -71,3 +71,4 @@ declare module "json-schema" {
  * @see https://spec.openapis.org/oas/latest.html#schema-object
  */
 export interface SchemaObject extends JSONSchema7 {}
+export type SchemaObjectDefinition = JSONSchema7Definition;
