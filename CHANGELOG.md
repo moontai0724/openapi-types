@@ -1,3 +1,5 @@
+## [3.1.6](https://github.com/moontai0724/openapi-types/compare/v3.1.5...v3.1.6) (2024-05-07)
+
 ## [3.1.5](https://github.com/moontai0724/openapi-types/compare/v3.1.4...v3.1.5) (2024-04-30)
 
 
