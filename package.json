@@ -22,13 +22,20 @@
     "types"
   ],
   "files": [
-    "build"
+    "build",
+    "dist"
   ],
-  "types": "build/index.d.ts",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts"
+    }
+  },
   "scripts": {
-    "build": "npm run build:clean && npm run build:ts && npm run docs",
-    "build:clean": "rm -rf build docs",
+    "build": "npm run build:clean && npm run build:ts && npm run build:bundle && npm run docs",
+    "build:clean": "rm -rf dist build docs",
     "build:ts": "tsc -b src/tsconfig.build.json",
+    "build:bundle": "rollup -c --configPlugin typescript --bundleConfigAsCjs",
     "docs": "typedoc --plugin typedoc-plugin-missing-exports src/index.ts",
     "test": "npx tsd",
     "lint": "npm run lint:eslint && npm run lint:prettier",
