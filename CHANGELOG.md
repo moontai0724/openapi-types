@@ -1,3 +1,11 @@
+## [3.1.7](https://github.com/moontai0724/openapi-types/compare/v3.1.6...v3.1.7) (2024-05-08)
+
+
+### Reverts
+
+* Revert "fix: add external types into bundle" ([af9cb28](https://github.com/moontai0724/openapi-types/commit/af9cb28bf5ffd80f49246390e1e22c0b10e34957))
+* Revert "build: don't generate bundle" ([de9ccc5](https://github.com/moontai0724/openapi-types/commit/de9ccc5cefe7c2cf2ae87bc8b5fd5719442df358))
+
 ## [3.1.6](https://github.com/moontai0724/openapi-types/compare/v3.1.5...v3.1.6) (2024-05-07)
 
 ## [3.1.5](https://github.com/moontai0724/openapi-types/compare/v3.1.4...v3.1.5) (2024-04-30)
